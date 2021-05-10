@@ -1,0 +1,53 @@
+
+<div>
+    <p class="message" *ngIf="showMessage">Updated Employee Details</p>
+
+    <form [formGroup]="myForm" (ngSubmit)="updateEmployee(myForm)">
+      <div class="formField">
+        <label>
+          First Name:
+        </label>
+        <input type="text" formControlName="firstName" placeholder="First Name" />
+      </div>
+      <div class="formField">
+        <label>
+          Last Name:
+        </label>
+        <input type="text" formControlName="lastName" placeholder="Last Name" />
+      </div>
+      <div class="formField">
+        <label>
+          DOB:
+        </label>
+        <input type="date" formControlName="dob" />
+      </div>
+      <div class="formField">
+         
+        <label>
+          Gender :
+        </label>
+        <div class="radioBoxContainer">
+          <div class="radioBox">
+            <input type="radio" value="female" name="gender" formControlName="gender" />
+            <label>Female</label>
+          </div>
+          <div class="radioBox">
+            <input type="radio" value="male" name="gender" formControlName="gender" />
+            <label>Male</label>
+          </div>
+        </div>
+  
+      </div>
+  
+      <div class="formField">
+        <label>
+          Department:
+        </label>
+        <input type="text" formControlName="department" placeholder="Department" />
+      </div>
+      <div class="submitButton">
+        <button type="submit">Update</button>
+        <button (click)="viewEmployeeDetails()">View Details</button>
+      </div>
+    </form>
+  </div>

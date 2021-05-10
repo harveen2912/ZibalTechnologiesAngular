@@ -1,0 +1,83 @@
+div {
+    form {
+        border: 2px solid #adadad;
+        margin-top: 90px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        display: grid;
+        row-gap: 20px;
+        padding: 20px;
+        align-items: center;
+        max-width : 500px;
+        .formField {
+            align-items: center;
+            display: grid;
+            grid-auto-flow: column;
+            column-gap: 20px;
+            grid-template-columns: 1fr 1fr;
+            .radioBoxContainer {
+                display: grid;
+                grid-auto-flow: column;
+                .radioBox {
+                    display: grid;
+                    grid-auto-flow: column;
+                    align-items: center;
+                    column-gap: 5px;
+                    width: fit-content;
+                }
+            }
+            input {
+                height: 40px;
+            }
+        }
+        .submitButton {
+            display : flex;
+            column-gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            button {
+                height: 40px;
+                border: none;
+                background: #1F1E4F;
+                border-radius: 10px;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 19px;
+                text-align: center;
+                color: #FFFFFF;
+                width: 200px;
+            }
+        }
+    }
+    .message {
+        position: fixed;
+        top: 0;
+        font-size : 20px;
+        color: #4F8A10;
+        margin-left: 50%;
+        width: fit-content;
+        transform: translateX(-50%);
+        padding: 15px;
+        border-radius: 10px;
+        background: #DFF2BF;
+    }
+
+    .error {
+        position: fixed;
+        top: 0;
+        font-size : 20px;
+        color: #D8000C;
+        margin-left: 50%;
+        width: fit-content;
+        transform: translateX(-50%);
+        padding: 15px;
+        border-radius: 10px;
+        background: #FFBABA;
+    }
+}
+
+input[type=text], input[type=date] {
+    border: 1px solid #ccc;
+    padding-left: 5px;
+}

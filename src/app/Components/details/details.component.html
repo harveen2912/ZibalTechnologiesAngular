@@ -1,0 +1,18 @@
+<div class="pageHeading"><h1> All Employees Details </h1>
+<div *ngIf="employeesData.length == 0"><p> No Employees Exist.</p> <button (click)="goToCreateEmployee()">Click here</button> <p>to create employee.</p></div>
+</div>
+<table *ngIf="employeesData.length > 0">
+    <tr>
+      <th *ngFor="let heading of employeeTableHeading">{{heading}}</th>
+    </tr>
+
+    <tr *ngFor="let employee of employeesData">
+      <td >{{employee.firstName}}</td>
+      <td >{{employee.lastName}}</td>
+      <td >{{employee.dob}}</td>
+      <td >{{employee.gender}}</td>
+      <td >{{employee.department}}</td>
+      <td><button (click)="updateEmployeeDetails(employee.id)">Update</button></td>
+      <td><button (click)="deleteEmployee(employee.id)">Delete</button></td>
+    </tr>
+</table>

@@ -1,0 +1,27 @@
+.pageHeading {
+    text-align: center;
+    div {
+        display:flex;
+        justify-content: center;
+        p {
+            font-size: 18px;
+            font-weight: 600;
+            color: #D8000C;
+        }
+    }
+}
+
+table {
+    border: 1px solid #adadad;
+    border-spacing: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+
+button {
+    border: none;
+    background: white;
+    text-decoration: underline;
+    color: darkblue;
+}
